@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "455681878340-sm19s3b34s0m4eb1q8pmboe0kjh2ar9m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mataginews",
+            "certificate_hash": "b520938b1276faf7eb8b55118a5979828184d272"
+          }
+        },
+        {
           "client_id": "455681878340-6ci5gmg01c52mm1ha8q6tiacgchghh3e.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

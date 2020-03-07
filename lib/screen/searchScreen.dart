@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mataginews/screen/resultScreen.dart';
+import 'package:mataginews/constant.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -17,17 +18,23 @@ class _SearchScreenState extends State<SearchScreen> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TextField(
-              onChanged: (value){
-                query = value;
-              },
+            Container(
+              padding: EdgeInsets.all(10.0),
+              child: TextField(
+                decoration: kTextFieldInputDecoration,
+                onChanged: (value){
+                  query = value;
+                },
+              ),
             ),
             FlatButton(
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ResultScreen()));
               },
               child: Text('Search'),
+              color: Colors.blue,
             ),
           ],
         ),
