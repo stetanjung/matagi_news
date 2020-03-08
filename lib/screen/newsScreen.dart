@@ -13,18 +13,15 @@ class _NewsScreenState extends State<NewsScreen> {
   String author = '';
   String desc = '';
   String content = '';
-  String url = '';
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     imageUrl = widget.data['urlToImage'];
     title = widget.data['title'];
     author = widget.data['author'];
     desc = widget.data['description'];
     content = widget.data['content'];
-    url = widget.data['url'];
   }
 
   @override
