@@ -9,11 +9,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  AuthGoogle auth = AuthGoogle();
+  AuthGoogle authGoogle = AuthGoogle();
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -23,9 +23,13 @@ class _LoginScreenState extends State<LoginScreen> {
               image: AssetImage('assets/images/mataginews.jpg'),
             ),
             GoogleSignInButton(
-              onPressed: () async{
-                auth.signInWithGoogle();
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SearchScreen()));
+              onPressed: () async {
+                var loggedin = await authGoogle.signInWithGoogle();
+                if (loggedin != null)
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SearchScreen()));
+                else
+                  LoginScreen();
               },
               darkMode: true,
               borderRadius: 10.0,

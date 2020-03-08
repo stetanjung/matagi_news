@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mataginews/util/network.dart';
+import 'package:mataginews/util/news.dart';
 
 class ResultScreen extends StatefulWidget {
   ResultScreen({this.query});
@@ -11,16 +9,15 @@ class ResultScreen extends StatefulWidget {
 }
 
 class _ResultScreenState extends State<ResultScreen> {
-  Network network = Network();
+  News news = News();
   void getNews() async {
-    Network network = Network();
-    var result = await network.getData(widget.query);
+    News news = News();
+    var result = await news.getData(widget.query);
     print(result);
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -32,7 +29,7 @@ class _ResultScreenState extends State<ResultScreen> {
         title: Text('Matagi News'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(FontAwesomeIcons.signOutAlt),
+            icon: Icon(Icons.ac_unit),
             onPressed: () {},
           )
         ],

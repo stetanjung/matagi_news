@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mataginews/screen/loginScreen.dart';
+import 'package:mataginews/screen/splashScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,10 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),  
-      home: LoginScreen(),
+      theme: ThemeData.dark(),
+      home: SplashScreen(),
     );
   }
 }

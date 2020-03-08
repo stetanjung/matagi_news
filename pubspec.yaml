@@ -30,10 +30,10 @@ flutter:
   assets:
    - assets/images/
   #  - images/a_dot_ham.jpeg
-  fonts:
-    - family: Exo
-      fonts:
-        - asset: assets/fonts/Exo-Black.ttf
+  # fonts:
+  #   - family: Exo
+  #     fonts:
+  #       - asset: assets/fonts/Exo-Black.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
